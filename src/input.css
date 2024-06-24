@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    @apply border-b-2;
+  }
+
+  .navbar a {
+    border-bottom: 4px solid transparent;
+  }
+
+  .navbar a:hover,
+  .navbar a:active {
+    @apply hover:text-primary cursor-pointer border-b-4 border-solid border-primary;
+  }
+}
